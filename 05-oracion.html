@@ -1,0 +1,97 @@
+<!-- ============================================================
+     PASO 6 — PEDIDO DE ORACIÓN
+     ============================================================ -->
+<section id="oracion">
+  <div class="contenedor">
+    <div class="oracion-grid">
+
+      <div class="oracion-info">
+        <span class="sec-tag reveal">
+          <i class="fa-solid fa-hands-praying" aria-hidden="true"></i> Oración
+        </span>
+
+        <h2 class="sec-title reveal d1">
+          Cuéntanos, <span>oramos contigo</span>
+        </h2>
+
+        <p class="sec-sub reveal d2">
+          No estás solo. Escribe tu petición y nuestro equipo de oración la recibirá
+          con respeto y cariño. Si prefieres que nadie más la conozca, marca la casilla
+          de confidencialidad.
+        </p>
+
+        <ul class="oracion-lista reveal d2">
+          <li>
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            <span>Tu petición se trata con total discreción.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+            <span>Un equipo de intercesores ora por cada pedido recibido.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
+            <span>Si lo deseas, te contactamos para acompañarte.</span>
+          </li>
+        </ul>
+
+        <blockquote class="oracion-versiculo reveal d3">
+          "Echen sobre él toda ansiedad, porque él cuida de ustedes."
+          <small>1 Pedro 5:7</small>
+        </blockquote>
+      </div>
+
+      <!-- ============================================================
+           FORMULARIO
+           >>> CÓMO ACTIVAR EL ENVÍO REAL <
+           Reemplaza action="#" por:
+           action="https://formsubmit.co/TU-CORREO@ejemplo.cl"
+           y descomenta las tres líneas ocultas de más abajo.
+           ============================================================ -->
+      <form id="formOracion" class="form-oracion reveal d1" action="#" method="POST" novalidate>
+
+        <!-- Descomenta al usar FormSubmit -->
+        <!--
+        <input type="hidden" name="_subject" value="Nuevo pedido de oración — Iglesia Nuestro Hogar">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        -->
+
+        <div class="campo">
+          <label for="nombre">Nombre <span class="req">*</span></label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          <p class="msj-error"></p>
+        </div>
+
+        <div class="campo">
+          <label for="contacto-oracion">Teléfono o correo electrónico <span class="req">*</span></label>
+          <input type="text" id="contacto-oracion" name="contacto" placeholder="+56 9 1234 5678 o tucorreo@ejemplo.cl" required>
+          <p class="msj-error"></p>
+        </div>
+
+        <div class="campo">
+          <label for="motivo">Motivo de oración <span class="req">*</span></label>
+          <textarea id="motivo" name="motivo" placeholder="Comparte con confianza aquello por lo que quieres que oremos." required></textarea>
+          <p class="msj-error"></p>
+        </div>
+
+        <label class="check" for="confidencial">
+          <input type="checkbox" id="confidencial" name="confidencial" value="Sí, es confidencial">
+          <span><strong>Deseo que mi pedido sea confidencial.</strong> Solo lo verá el equipo de oración.</span>
+        </label>
+
+        <button type="submit" class="btn btn-primario">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Enviar pedido de oración
+        </button>
+
+        <p class="form-aviso">Los campos con <span style="color:#C77B5A">*</span> son obligatorios.</p>
+
+        <div class="form-ok" id="formOk" role="status">
+          <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+          Recibimos tu pedido. Oraremos por ti.
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
