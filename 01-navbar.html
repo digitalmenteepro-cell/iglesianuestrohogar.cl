@@ -1,0 +1,66 @@
+<!-- ============================================================
+     PASO 2 — NAVEGACIÓN
+     ============================================================ -->
+<style>
+  .nav-inner{height:86px;transition:height .35s ease;}
+  #navbar.scrolled .nav-inner{height:74px;}
+  .nav-logo{gap:14px;}
+  .nav-logo-img{
+    height:62px;width:62px;
+    object-fit:contain;object-position:center;
+    display:block;flex-shrink:0;
+    border-radius:0;
+    transition:height .35s ease,width .35s ease;
+  }
+  #navbar.scrolled .nav-logo-img{height:50px;width:50px;}
+  @media (max-width:768px){
+    .nav-logo-img{height:50px;width:50px;}
+    #navbar.scrolled .nav-logo-img{height:44px;width:44px;}
+  }
+</style>
+
+<header>
+  <nav id="navbar" aria-label="Navegación principal">
+    <div class="nav-inner">
+
+      <a href="#inicio" class="nav-logo" aria-label="Iglesia Nuestro Hogar — Inicio">
+        <img src="assets/img/logo%20sin%20fondo.png"
+             alt="Logo de Iglesia Nuestro Hogar"
+             class="nav-logo-img"
+             width="62" height="62">
+        <span class="nav-logo-text">
+          <span class="nav-logo-name">Nuestro Hogar</span>
+          <span class="nav-logo-sub">Iglesia Cristiana</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio"      class="nav-link">Inicio</a></li>
+        <li><a href="#nosotros"    class="nav-link">Nosotros</a></li>
+        <li><a href="#reuniones"   class="nav-link">Reuniones</a></li>
+        <li><a href="#ministerios" class="nav-link">Ministerios</a></li>
+        <li><a href="#oracion"     class="nav-link">Oración</a></li>
+        <li><a href="#eventos"     class="nav-link">Eventos</a></li>
+        <li><a href="#contacto"    class="nav-link">Contacto</a></li>
+        <li class="nav-cta-mobile">
+          <a href="#contacto" class="btn-visitanos">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Visítanos
+          </a>
+        </li>
+      </ul>
+
+      <a href="#contacto" class="btn-visitanos nav-cta-desktop">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Visítanos
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay" hidden></div>
+</header>
+
+
+<main>
