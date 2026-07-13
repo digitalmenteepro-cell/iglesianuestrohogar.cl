@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Iglesia Nuestro Hogar | Comunidad cristiana en Chillán</title>
+  <meta name="description" content="Conoce Iglesia Nuestro Hogar, una comunidad cristiana en Chillán para crecer en la fe, compartir en familia y conocer el amor de Dios. Culto principal los sábados a las 18:30 h.">
+  <meta name="theme-color" content="#1F3A5F">
+
+  <link rel="apple-touch-icon" href="assets/img/logo%20sin%20fondo.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:site_name" content="Iglesia Nuestro Hogar">
+  <meta property="og:title" content="Iglesia Nuestro Hogar | Comunidad cristiana en Chillán">
+  <meta property="og:description" content="Un lugar para crecer en la fe, compartir en familia y conocer el amor de Dios.">
+  <meta property="og:image" content="https://digitalmenteepro-cell.github.io/iglesianuestrohogar.cl/assets/img/Portada%20nuestro%20hogar.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Iglesia Nuestro Hogar | Comunidad cristiana en Chillán">
+  <meta name="twitter:description" content="Un lugar para crecer en la fe, compartir en familia y conocer el amor de Dios.">
+  <meta name="twitter:image" content="https://digitalmenteepro-cell.github.io/iglesianuestrohogar.cl/assets/img/Portada%20nuestro%20hogar.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Iglesia Nuestro Hogar",
+    "description": "Comunidad cristiana en Chillán para crecer en la fe, compartir en familia y conocer el amor de Dios.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Vega de Saldías 772",
+      "addressLocality": "Chillán",
+      "addressRegion": "Ñuble",
+      "addressCountry": "CL"
+    },
+    "telephone": "+56992483272",
+    "email": "iglesianuestrohogar@gmail.com",
+    "sameAs": [
+      "https://www.facebook.com/share/17JupG4E4t/",
+      "https://www.instagram.com/nuestrohogarchillan"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "18:30",
+        "closes": "20:30",
+        "name": "Culto principal"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .nav-inner{height:86px;transition:height .35s ease;}
+    #navbar.scrolled .nav-inner{height:74px;}
+    .nav-logo{gap:14px;}
+    .nav-logo-img{
+      height:62px;width:62px;
+      object-fit:contain;object-position:center;
+      display:block;flex-shrink:0;border-radius:0;
+      transition:height .35s ease,width .35s ease;
+    }
+    #navbar.scrolled .nav-logo-img{height:50px;width:50px;}
+    @media (max-width:768px){
+      .nav-logo-img{height:50px;width:50px;}
+      #navbar.scrolled .nav-logo-img{height:44px;width:44px;}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ============================================================
+     01 — NAVEGACIÓN
+     ============================================================ -->
+<header>
+  <nav id="navbar" aria-label="Navegación principal">
+    <div class="nav-inner">
+
+      <a href="#inicio" class="nav-logo" aria-label="Iglesia Nuestro Hogar — Inicio">
+        <img src="assets/img/logo%20sin%20fondo.png"
+             alt="Logo de Iglesia Nuestro Hogar"
+             class="nav-logo-img"
+             width="62" height="62">
+        <span class="nav-logo-text">
+          <span class="nav-logo-name">Nuestro Hogar</span>
+          <span class="nav-logo-sub">Iglesia Cristiana</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio"      class="nav-link">Inicio</a></li>
+        <li><a href="#nosotros"    class="nav-link">Nosotros</a></li>
+        <li><a href="#reuniones"   class="nav-link">Reuniones</a></li>
+        <li><a href="#ministerios" class="nav-link">Ministerios</a></li>
+        <li><a href="#oracion"     class="nav-link">Oración</a></li>
+        <li><a href="#eventos"     class="nav-link">Eventos</a></li>
+        <li><a href="#contacto"    class="nav-link">Contacto</a></li>
+        <li class="nav-cta-mobile">
+          <a href="#contacto" class="btn-visitanos">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Visítanos
+          </a>
+        </li>
+      </ul>
+
+      <a href="#contacto" class="btn-visitanos nav-cta-desktop">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Visítanos
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay" hidden></div>
+</header>
+
+
+<main>
+
+<!-- ============================================================
+     02 — PORTADA PRINCIPAL
+     ============================================================ -->
+<section id="inicio" class="hero">
+
+  <div class="hero-bg">
+    <img src="assets/img/Portada%20nuestro%20hogar.png"
+         alt="Congregación de Iglesia Nuestro Hogar reunida en adoración"
+         class="hero-img"
+         fetchpriority="high"
+         width="1920" height="1080">
+    <div class="hero-veil" aria-hidden="true"></div>
+  </div>
+
+  <div class="hero-content">
+    <span class="hero-tag reveal">
+      <i class="fa-solid fa-dove" aria-hidden="true"></i>
+      Comunidad cristiana en Chillán
+    </span>
+
+    <h1 class="hero-title reveal d1">
+      Bienvenidos a <span>Nuestro Hogar</span>
+    </h1>
+
+    <p class="hero-sub reveal d2">
+      Un lugar para crecer en la fe, compartir en familia y conocer el amor de Dios.
+    </p>
+
+    <div class="hero-btns reveal d3">
+      <a href="#nosotros" class="btn btn-primario">
+        <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Conócenos
+      </a>
+      <a href="#reuniones" class="btn btn-secundario">
+        <i class="fa-regular fa-clock" aria-hidden="true"></i> Horarios de reuniones
+      </a>
+    </div>
+
+    <p class="hero-nota reveal d3">
+      <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+      Culto principal: <strong>sábados a las 18:30 h</strong>
+    </p>
+  </div>
+
+  <a href="#nosotros" class="hero-scroll" aria-label="Bajar a la siguiente sección"><span></span></a>
+</section>
+
+
+<!-- ============================================================
+     03 — QUIÉNES SOMOS
+     ============================================================ -->
+<section id="nosotros">
+  <div class="contenedor">
+    <div class="nosotros-grid">
+
+      <div class="nosotros-img-wrap reveal">
+        <img src="assets/img/IMG_0396.JPG"
+             alt="Miembros de la congregación de Iglesia Nuestro Hogar compartiendo juntos"
+             class="nosotros-img"
+             width="1000" height="1200" loading="lazy">
+        <div class="nosotros-badge">
+          <i class="fa-solid fa-people-roof" aria-hidden="true"></i>
+          <strong>Todos tienen<br>un lugar aquí</strong>
+        </div>
+      </div>
+
+      <div class="nosotros-txt">
+        <span class="sec-tag reveal">
+          <i class="fa-solid fa-heart" aria-hidden="true"></i> Quiénes somos
+        </span>
+
+        <h2 class="sec-title reveal d1">
+          Más que una iglesia,<br>somos una <span>familia</span>
+        </h2>
+
+        <blockquote class="nosotros-cita reveal d1">
+          "En Nuestro Hogar creemos que cada persona tiene un lugar, un propósito y una historia
+          que Dios puede transformar. Queremos caminar juntos, crecer en la fe y servir a
+          nuestra comunidad."
+        </blockquote>
+
+        <p class="reveal d2">
+          Iglesia Nuestro Hogar es una comunidad cristiana que busca acercar a las personas a Dios,
+          fortalecer a las familias y compartir el mensaje de Jesús. Nuestras puertas están abiertas
+          para quien quiera conocer, preguntar, descansar o simplemente acompañarnos un sábado.
+        </p>
+
+        <div class="valores reveal d2">
+          <div class="valor">
+            <i class="fa-solid fa-book-bible" aria-hidden="true"></i>
+            <span>Fe</span>
+          </div>
+          <div class="valor">
+            <i class="fa-solid fa-hands-holding-child" aria-hidden="true"></i>
+            <span>Familia</span>
+          </div>
+          <div class="valor">
+            <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+            <span>Esperanza</span>
+          </div>
+        </div>
+
+        <a href="#contacto" class="btn btn-outline reveal d3">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Visítanos este sábado
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     04 — REUNIONES
+     ============================================================ -->
+<section id="reuniones">
+  <div class="contenedor">
+
+    <div class="sec-head centrado">
+      <span class="sec-tag reveal">
+        <i class="fa-regular fa-calendar" aria-hidden="true"></i> Reuniones
+      </span>
+      <h2 class="sec-title reveal d1">Nuestro <span>encuentro</span></h2>
+      <p class="sec-sub reveal d2">
+        Cada sábado nos reunimos para adorar, aprender y acompañarnos.
+        No necesitas invitación: llega, siéntate y siéntete en casa.
+      </p>
+    </div>
+
+    <div class="reuniones-grid">
+
+      <article class="reunion-card destacada reveal">
+        <div class="reunion-icon"><i class="fa-solid fa-church" aria-hidden="true"></i></div>
+        <h3 class="reunion-titulo">Culto principal</h3>
+        <p class="reunion-hora">
+          <i class="fa-regular fa-clock" aria-hidden="true"></i>
+          Sábados · 18:30 h
+        </p>
+        <p class="reunion-desc">
+          Nuestro encuentro central de la semana: alabanza, palabra y comunión.
+          Ideal si nos visitas por primera vez.
+        </p>
+      </article>
+
+      <article class="reunion-card reveal d1">
+        <div class="reunion-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+        <h3 class="reunion-titulo">Dónde nos reunimos</h3>
+        <p class="reunion-hora">
+          <i class="fa-solid fa-map-pin" aria-hidden="true"></i>
+          Vega de Saldías 772, Chillán
+        </p>
+        <p class="reunion-desc">
+          Nuestras puertas están abiertas para toda la familia.
+          Ven como estás, aquí hay un lugar guardado para ti.
+        </p>
+      </article>
+
+      <article class="reunion-card reveal d2">
+        <div class="reunion-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
+        <h3 class="reunion-titulo">Actividades especiales</h3>
+        <p class="reunion-hora">
+          <i class="fa-regular fa-clock" aria-hidden="true"></i>
+          Según calendario
+        </p>
+        <p class="reunion-desc">
+          Encuentros familiares, jornadas de servicio y celebraciones.
+          Revisa la sección de eventos.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     05 — PEDIDO DE ORACIÓN
+     ============================================================ -->
+<section id="oracion">
+  <div class="contenedor">
+    <div class="oracion-grid">
+
+      <div class="oracion-info">
+        <span class="sec-tag reveal">
+          <i class="fa-solid fa-hands-praying" aria-hidden="true"></i> Oración
+        </span>
+
+        <h2 class="sec-title reveal d1">
+          Cuéntanos, <span>oramos contigo</span>
+        </h2>
+
+        <p class="sec-sub reveal d2">
+          No estás solo. Escribe tu petición y nuestro equipo de oración la recibirá
+          con respeto y cariño. Si prefieres que nadie más la conozca, marca la casilla
+          de confidencialidad.
+        </p>
+
+        <ul class="oracion-lista reveal d2">
+          <li>
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            <span>Tu petición se trata con total discreción.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+            <span>Un equipo de intercesores ora por cada pedido recibido.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
+            <span>Si lo deseas, te contactamos para acompañarte.</span>
+          </li>
+        </ul>
+
+        <blockquote class="oracion-versiculo reveal d3">
+          "Echen sobre él toda ansiedad, porque él cuida de ustedes."
+          <small>1 Pedro 5:7</small>
+        </blockquote>
+      </div>
+
+      <!-- ============================================================
+           FORMULARIO
+           >>> PARA ACTIVAR EL ENVÍO REAL <
+           1. Cambia action="#" por:
+              action="https://formsubmit.co/iglesianuestrohogar@gmail.com"
+           2. Descomenta las tres líneas de más abajo (quita <!-- y -->).
+           3. Envía un pedido de prueba. Llegará un correo de confirmación
+              una sola vez. Haz clic en el enlace y queda funcionando.
+           ============================================================ -->
+      <form id="formOracion" class="form-oracion reveal d1" action="#" method="POST" novalidate>
+
+        <!--
+        <input type="hidden" name="_subject" value="Nuevo pedido de oración — Iglesia Nuestro Hogar">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        -->
+
+        <div class="campo">
+          <label for="nombre">Nombre <span class="req">*</span></label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          <p class="msj-error"></p>
+        </div>
+
+        <div class="campo">
+          <label for="contacto-oracion">Teléfono o correo electrónico <span class="req">*</span></label>
+          <input type="text" id="contacto-oracion" name="contacto" placeholder="+56 9 1234 5678 o tucorreo@ejemplo.cl" required>
+          <p class="msj-error"></p>
+        </div>
+
+        <div class="campo">
+          <label for="motivo">Motivo de oración <span class="req">*</span></label>
+          <textarea id="motivo" name="motivo" placeholder="Comparte con confianza aquello por lo que quieres que oremos." required></textarea>
+          <p class="msj-error"></p>
+        </div>
+
+        <label class="check" for="confidencial">
+          <input type="checkbox" id="confidencial" name="confidencial" value="Sí, es confidencial">
+          <span><strong>Deseo que mi pedido sea confidencial.</strong> Solo lo verá el equipo de oración.</span>
+        </label>
+
+        <button type="submit" class="btn btn-primario">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Enviar pedido de oración
+        </button>
+
+        <p class="form-aviso">Los campos con <span style="color:#C77B5A">*</span> son obligatorios.</p>
+
+        <div class="form-ok" id="formOk" role="status">
+          <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+          Recibimos tu pedido. Oraremos por ti.
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     06 — MINISTERIOS
+     ============================================================ -->
+<section id="ministerios">
+  <div class="contenedor">
+
+    <div class="sec-head centrado">
+      <span class="sec-tag reveal">
+        <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Ministerios
+      </span>
+      <h2 class="sec-title reveal d1">Encuentra tu <span>lugar</span></h2>
+      <p class="sec-sub reveal d2">
+        Cada persona tiene un don. Estos son los espacios donde puedes servir,
+        crecer y compartir con otros.
+      </p>
+    </div>
+
+    <div class="ministerios-grid">
+
+      <article class="min-card reveal">
+        <div class="min-img-wrap">
+          <img src="assets/img/ministerios/alabanza.jpg" alt="Ministerio de Alabanza de Iglesia Nuestro Hogar" class="min-img" width="800" height="600" loading="lazy">
+          <div class="min-icon"><i class="fa-solid fa-music" aria-hidden="true"></i></div>
+        </div>
+        <div class="min-body">
+          <h3 class="min-titulo">Ministerio de Alabanza</h3>
+          <p class="min-desc">
+            Músicos y cantantes que guían a la congregación en adoración cada semana.
+          </p>
+          <a href="#contacto" class="min-link">
+            Quiero participar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="min-card reveal d1">
+        <div class="min-img-wrap">
+          <img src="assets/img/ministerios/jovenes.jpg" alt="Ministerio de Jóvenes de Iglesia Nuestro Hogar" class="min-img" width="800" height="600" loading="lazy">
+          <div class="min-icon"><i class="fa-solid fa-fire" aria-hidden="true"></i></div>
+        </div>
+        <div class="min-body">
+          <h3 class="min-titulo">Ministerio de Jóvenes</h3>
+          <p class="min-desc">
+            Espacio para adolescentes y jóvenes: amistad, preguntas honestas y fe viva.
+          </p>
+          <a href="#contacto" class="min-link">
+            Quiero participar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="min-card reveal d2">
+        <div class="min-img-wrap">
+          <img src="assets/img/ministerios/ninos.jpg" alt="Ministerio de Niños de Iglesia Nuestro Hogar" class="min-img" width="800" height="600" loading="lazy">
+          <div class="min-icon"><i class="fa-solid fa-shapes" aria-hidden="true"></i></div>
+        </div>
+        <div class="min-body">
+          <h3 class="min-titulo">Ministerio de Niños</h3>
+          <p class="min-desc">
+            Enseñanza bíblica creativa y segura para los más pequeños de la casa.
+          </p>
+          <a href="#contacto" class="min-link">
+            Quiero participar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="min-card reveal">
+        <div class="min-img-wrap">
+          <img src="assets/img/ministerios/oracion.jpg" alt="Ministerio de Oración de Iglesia Nuestro Hogar" class="min-img" width="800" height="600" loading="lazy">
+          <div class="min-icon"><i class="fa-solid fa-hands-praying" aria-hidden="true"></i></div>
+        </div>
+        <div class="min-body">
+          <h3 class="min-titulo">Ministerio de Oración</h3>
+          <p class="min-desc">
+            Intercesores que sostienen en oración a la iglesia, las familias y la ciudad.
+          </p>
+          <a href="#oracion" class="min-link">
+            Conocer más <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="min-card reveal d1">
+        <div class="min-img-wrap">
+          <img src="assets/img/ministerios/familias.jpg" alt="Ministerio de Familias de Iglesia Nuestro Hogar" class="min-img" width="800" height="600" loading="lazy">
+          <div class="min-icon"><i class="fa-solid fa-house-chimney-user" aria-hidden="true"></i></div>
+        </div>
+        <div class="min-body">
+          <h3 class="min-titulo">Ministerio de Familias</h3>
+          <p class="min-desc">
+            Acompañamiento a matrimonios y padres para construir hogares firmes.
+          </p>
+          <a href="#contacto" class="min-link">
+            Quiero participar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="min-card reveal d2">
+        <div class="min-img-wrap">
+          <img src="assets/img/ministerios/comunidad.jpg" alt="Servicio y apoyo comunitario de Iglesia Nuestro Hogar" class="min-img" width="800" height="600" loading="lazy">
+          <div class="min-icon"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></div>
+        </div>
+        <div class="min-body">
+          <h3 class="min-titulo">Servicio y apoyo comunitario</h3>
+          <p class="min-desc">
+            Salimos a servir: ayuda concreta a quienes más lo necesitan en nuestro entorno.
+          </p>
+          <a href="#contacto" class="min-link">
+            Quiero participar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     07 — PRÓXIMOS EVENTOS
+     ============================================================ -->
+<section id="eventos">
+  <div class="contenedor">
+
+    <div class="sec-head centrado">
+      <span class="sec-tag reveal">
+        <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> Eventos
+      </span>
+      <h2 class="sec-title reveal d1">Próximas <span>actividades</span></h2>
+      <p class="sec-sub reveal d2">
+        Actividades abiertas a toda la comunidad. Trae a tu familia, trae a un amigo.
+      </p>
+    </div>
+
+    <div class="eventos-grid">
+
+      <!-- ===== EVENTO 1 — EDITAR ===== -->
+      <article class="evento-card reveal">
+        <div class="evento-img-wrap">
+          <img src="assets/img/eventos/evento-1.jpg" alt="Imagen del evento" class="evento-img" width="800" height="500" loading="lazy">
+          <div class="evento-fecha">
+            <span class="evento-dia">00</span>
+            <span class="evento-mes">Mes</span>
+          </div>
+        </div>
+        <div class="evento-body">
+          <h3 class="evento-titulo">Nombre del evento</h3>
+          <ul class="evento-meta">
+            <li><i class="fa-regular fa-clock" aria-hidden="true"></i> Horario por definir</li>
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Vega de Saldías 772, Chillán</li>
+          </ul>
+          <p class="evento-desc">
+            Descripción breve del evento.
+          </p>
+          <a href="#contacto" class="btn btn-outline">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i> Más información
+          </a>
+        </div>
+      </article>
+
+      <!-- ===== EVENTO 2 — EDITAR ===== -->
+      <article class="evento-card reveal d1">
+        <div class="evento-img-wrap">
+          <img src="assets/img/eventos/evento-2.jpg" alt="Imagen del evento" class="evento-img" width="800" height="500" loading="lazy">
+          <div class="evento-fecha">
+            <span class="evento-dia">00</span>
+            <span class="evento-mes">Mes</span>
+          </div>
+        </div>
+        <div class="evento-body">
+          <h3 class="evento-titulo">Nombre del evento</h3>
+          <ul class="evento-meta">
+            <li><i class="fa-regular fa-clock" aria-hidden="true"></i> Horario por definir</li>
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Vega de Saldías 772, Chillán</li>
+          </ul>
+          <p class="evento-desc">
+            Descripción breve del evento.
+          </p>
+          <a href="#contacto" class="btn btn-outline">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i> Más información
+          </a>
+        </div>
+      </article>
+
+      <!-- ===== EVENTO 3 — EDITAR ===== -->
+      <article class="evento-card reveal d2">
+        <div class="evento-img-wrap">
+          <img src="assets/img/eventos/evento-3.jpg" alt="Imagen del evento" class="evento-img" width="800" height="500" loading="lazy">
+          <div class="evento-fecha">
+            <span class="evento-dia">00</span>
+            <span class="evento-mes">Mes</span>
+          </div>
+        </div>
+        <div class="evento-body">
+          <h3 class="evento-titulo">Nombre del evento</h3>
+          <ul class="evento-meta">
+            <li><i class="fa-regular fa-clock" aria-hidden="true"></i> Horario por definir</li>
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Vega de Saldías 772, Chillán</li>
+          </ul>
+          <p class="evento-desc">
+            Descripción breve del evento.
+          </p>
+          <a href="#contacto" class="btn btn-outline">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i> Más información
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     08 — UBICACIÓN Y CONTACTO
+     ============================================================ -->
+<section id="contacto">
+  <div class="contenedor">
+
+    <div class="sec-head">
+      <span class="sec-tag reveal">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Visítanos
+      </span>
+      <h2 class="sec-title reveal d1">Te esperamos en <span>Nuestro Hogar</span></h2>
+      <p class="sec-sub reveal d2">
+        Ven como estás. Aquí siempre habrá un lugar guardado para ti.
+      </p>
+    </div>
+
+    <div class="contacto-grid">
+
+      <div class="contacto-info reveal">
+        <ul class="contacto-datos">
+
+          <li>
+            <div class="dato-icon"><i class="fa-solid fa-church" aria-hidden="true"></i></div>
+            <div class="dato-txt">
+              <strong>Iglesia</strong>
+              <span>Iglesia Nuestro Hogar</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="dato-icon"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></div>
+            <div class="dato-txt">
+              <strong>Dirección</strong>
+              <span>Vega de Saldías 772 · Chillán, Ñuble</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="dato-icon"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></div>
+            <div class="dato-txt">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/56992483272?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Iglesia%20Nuestro%20Hogar." target="_blank" rel="noopener">+56 9 9248 3272</a>
+            </div>
+          </li>
+
+          <li>
+            <div class="dato-icon"><i class="fa-regular fa-envelope" aria-hidden="true"></i></div>
+            <div class="dato-txt">
+              <strong>Correo</strong>
+              <a href="mailto:iglesianuestrohogar@gmail.com">iglesianuestrohogar@gmail.com</a>
+            </div>
+          </li>
+
+          <li>
+            <div class="dato-icon"><i class="fa-regular fa-clock" aria-hidden="true"></i></div>
+            <div class="dato-txt">
+              <strong>Culto principal</strong>
+              <span>Sábados a las 18:30 h</span>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="redes">
+          <a href="https://www.facebook.com/share/17JupG4E4t/" class="red" target="_blank" rel="noopener" aria-label="Facebook de Iglesia Nuestro Hogar">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/nuestrohogarchillan" class="red" target="_blank" rel="noopener" aria-label="Instagram de Iglesia Nuestro Hogar">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <a href="https://wa.me/56992483272?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Iglesia%20Nuestro%20Hogar." class="btn btn-azul" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Escríbenos por WhatsApp
+        </a>
+      </div>
+
+      <div class="contacto-mapa reveal d1">
+        <div class="mapa-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=Vega%20de%20Saldias%20772%2C%20Chillan%2C%20Chile&output=embed"
+            title="Mapa de ubicación de Iglesia Nuestro Hogar"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="mapa-acciones">
+          <a href="https://maps.google.com/?q=Vega+de+Saldias+772,+Chillan,+Chile" class="btn btn-primario" target="_blank" rel="noopener">
+            <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Cómo llegar
+          </a>
+          <a href="#reuniones" class="btn btn-outline">
+            <i class="fa-regular fa-clock" aria-hidden="true"></i> Ver horarios
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ============================================================
+     09 — PIE DE PÁGINA
+     ============================================================ -->
+<footer>
+  <div class="contenedor">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="assets/img/logo%20sin%20fondo.png" alt="Logo de Iglesia Nuestro Hogar" width="54" height="54" loading="lazy">
+          <span>
+            <span class="footer-logo-name">Nuestro Hogar</span>
+            <span class="footer-logo-sub">Iglesia Cristiana</span>
+          </span>
+        </div>
+        <p class="footer-desc">
+          Una comunidad cristiana en Chillán donde cada persona tiene un lugar,
+          un propósito y una historia que Dios puede transformar.
+        </p>
+        <div class="footer-redes">
+          <a href="https://www.facebook.com/share/17JupG4E4t/" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/nuestrohogarchillan" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#reuniones">Reuniones</a></li>
+          <li><a href="#ministerios">Ministerios</a></li>
+          <li><a href="#oracion">Pedido de oración</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Horarios</h3>
+        <p class="footer-horario">
+          <strong>Culto principal</strong><br>
+          <span>Sábados · 18:30 h</span><br><br>
+          <strong>Actividades especiales</strong><br>
+          Consulta la sección de eventos.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <ul class="footer-contacto">
+          <li>
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Vega de Saldías 772 · Chillán, Ñuble</span>
+          </li>
+          <li>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <a href="https://wa.me/56992483272?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Iglesia%20Nuestro%20Hogar." target="_blank" rel="noopener">+56 9 9248 3272</a>
+          </li>
+          <li>
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:iglesianuestrohogar@gmail.com">iglesianuestrohogar@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="footer-frase">
+    Las paredes quedan, la misión continúa.<br>
+    <span>La misión sigue, eres parte de ella.</span>
+  </p>
+
+  <div class="contenedor">
+    <div class="footer-bottom">
+      <span>&copy; <span id="anio">2026</span> Iglesia Nuestro Hogar. Todos los derechos reservados.</span>
+      <span>Hecho con fe en Chillán, Chile.</span>
+    </div>
+  </div>
+</footer>
+
+
+<a href="https://wa.me/56992483272?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Iglesia%20Nuestro%20Hogar." class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>
