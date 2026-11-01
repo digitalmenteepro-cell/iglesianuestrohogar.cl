@@ -167,6 +167,7 @@
       <div class="menu-drop" id="menuDrop" role="menu" hidden>
         <a role="menuitem" href="#inicio">Inicio</a>
         <a role="menuitem" href="#nosotros">Quiénes somos</a>
+        <a role="menuitem" href="#pastores">Nuestros pastores</a>
         <a role="menuitem" href="#reuniones">Reuniones</a>
         <a role="menuitem" href="#ministerios">Ministerios</a>
         <a role="menuitem" href="#momentos">Momentos</a>
@@ -280,13 +281,14 @@
         <h2 class="h2 reveal d1">Más que una iglesia, somos una familia</h2>
         <p class="meta reveal d1">Iglesia cristiana · Chillán, Ñuble · Todas las edades</p>
 
-        <div class="host reveal d2">
-          <span class="host-av"><img src="assets/web/icono-180.png" alt="" width="56" height="56"></span>
+        <a class="host reveal d2" href="#pastores">
+          <span class="host-av photo"><img src="assets/web/pastores-avatar.webp" alt="Pastores Israel Albornoz y Lucila Peralta" width="56" height="56"></span>
           <div>
-            <strong>Una comunidad que te recibe</strong>
+            <strong>Pastores Israel Albornoz y Lucila Peralta</strong>
             <span>Nuestras puertas están abiertas para conocer, preguntar o descansar.</span>
           </div>
-        </div>
+          <svg class="ic host-go" aria-hidden="true"><use href="#i-right"/></svg>
+        </a>
 
         <ul class="highlights reveal d2">
           <li>
@@ -365,6 +367,53 @@
           </ul>
         </div>
       </aside>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     PASTORES
+     ========================================================= -->
+<section id="pastores" class="band pastors-band">
+  <div class="wrap">
+    <div class="pastors">
+
+      <figure class="pastors-photo reveal">
+        <img src="assets/web/pastores.webp" alt="Pastor Israel Albornoz y Pastora Lucila Peralta, pastores de Iglesia Nuestro Hogar" width="993" height="1000" loading="lazy">
+        <figcaption class="pastors-card">
+          <span class="pc-av"><img src="assets/web/icono-64.png" alt="" width="26" height="26"></span>
+          <span><strong>Nuestros pastores</strong><small>Iglesia Nuestro Hogar · Chillán</small></span>
+        </figcaption>
+      </figure>
+
+      <div class="pastors-txt">
+        <p class="kicker reveal">Conoce a nuestros pastores</p>
+        <h2 class="h2 pastors-names reveal d1">
+          <span>Pastor <b>Israel Albornoz</b></span>
+          <span class="amp" aria-hidden="true">&amp;</span>
+          <span>Pastora <b>Lucila Peralta</b></span>
+        </h2>
+        <p class="lead reveal d2">
+          Israel y Lucila pastorean Nuestro Hogar con un mismo anhelo: que cada persona que cruce
+          nuestras puertas se sienta en casa, encuentre a Dios y una familia con quien caminar.
+        </p>
+
+        <figure class="pastors-verse reveal d2">
+          <blockquote>“Todo lo puedo en Cristo que me fortalece.”</blockquote>
+          <figcaption>Filipenses 4:13</figcaption>
+        </figure>
+
+        <div class="pastors-btns reveal d3">
+          <a class="btn btn-primary" href="https://wa.me/56992483272?text=Hola%20pastores%2C%20me%20gustar%C3%ADa%20conversar%20con%20ustedes." target="_blank" rel="noopener">
+            <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Escribir a los pastores
+          </a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/nuestrohogarchillan" target="_blank" rel="noopener">
+            <svg class="ic" aria-hidden="true"><use href="#i-instagram"/></svg> Instagram
+          </a>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -630,6 +679,26 @@
 <!-- =========================================================
      7. CONTACTO / DÓNDE NOS REUNIMOS
      ========================================================= -->
+<!-- =========================================================
+     INSTAGRAM — los videos se cambian en js/script.js (lista VIDEOS_IG)
+     ========================================================= -->
+<section id="instagram" class="band ig-band">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <p class="kicker reveal">Instagram</p>
+        <h2 class="h2 reveal d1">Nuestros últimos videos</h2>
+        <p class="lead reveal d2">Prédicas, alabanza y momentos de la comunidad. Síguenos en <a href="https://www.instagram.com/nuestrohogarchillan" target="_blank" rel="noopener">@nuestrohogarchillan</a>.</p>
+      </div>
+      <a class="btn btn-ig reveal d2" href="https://www.instagram.com/nuestrohogarchillan" target="_blank" rel="noopener">
+        <svg class="ic" aria-hidden="true"><use href="#i-instagram"/></svg> Seguir en Instagram
+      </a>
+    </div>
+    <div class="ig-grid" id="igGrid"></div>
+  </div>
+</section>
+
+
 <!-- CINTA DE FOTOS EN MOVIMIENTO -->
 <section class="marquee" aria-label="Fotos de la comunidad">
   <p class="marquee-title">Hay un lugar para ti <span aria-hidden="true">·</span> Hay un lugar para ti <span aria-hidden="true">·</span> Hay un lugar para ti</p>
@@ -713,6 +782,7 @@
         <h3>Explora</h3>
         <ul>
           <li><a href="#nosotros">Quiénes somos</a></li>
+          <li><a href="#pastores">Nuestros pastores</a></li>
           <li><a href="#reuniones">Reuniones</a></li>
           <li><a href="#ministerios">Ministerios</a></li>
           <li><a href="#momentos">Momentos</a></li>
@@ -723,6 +793,7 @@
         <ul>
           <li><a href="#oracion">Pedido de oración</a></li>
           <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#instagram">Videos</a></li>
           <li><a href="#contacto">Cómo llegar</a></li>
         </ul>
       </div>
