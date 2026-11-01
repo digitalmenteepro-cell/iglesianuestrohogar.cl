@@ -614,6 +614,76 @@ section[id], aside[id] { scroll-margin-top: calc(var(--nav-h) + 12px); }
   .marquee { padding: 52px 0 48px; }
 }
 
+/* ---------- Pastores ---------- */
+a.host { text-decoration: none; color: inherit; transition: background .2s; }
+a.host:hover strong { text-decoration: underline; text-underline-offset: 3px; }
+.host-av.photo { overflow: hidden; background: var(--surface-strong); }
+.host-av.photo img { width: 100%; height: 100%; object-fit: cover; }
+.host-go { width: 18px; height: 18px; margin-left: auto; color: var(--muted); flex: none; }
+
+.pastors-band { background: linear-gradient(180deg, #fff 0%, var(--sky-soft) 100%); }
+.pastors { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
+.pastors-photo { position: relative; border-radius: var(--r-lg); overflow: visible; isolation: isolate; }
+.pastors-photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; border-radius: var(--r-lg); box-shadow: var(--shadow-lg); }
+.pastors-photo::before {
+  content: ""; position: absolute; inset: 18px -18px -18px 18px; z-index: -1;
+  border-radius: var(--r-lg); border: 2px solid var(--sky); opacity: .6;
+}
+.pastors-card {
+  position: absolute; left: 18px; bottom: 18px; display: flex; align-items: center; gap: 12px;
+  background: #fff; border-radius: var(--r-md); padding: 10px 16px 10px 10px; box-shadow: var(--shadow-lg);
+}
+.pc-av { width: 40px; height: 40px; border-radius: 50%; background: var(--sky-soft); display: grid; place-items: center; }
+.pastors-card strong { display: block; font-size: 15px; }
+.pastors-card small { display: block; font-size: 13px; color: var(--muted); }
+.pastors-names { display: flex; flex-direction: column; gap: 2px; font-size: clamp(30px, 4vw, 46px); line-height: 1.1; }
+.pastors-names span { font-weight: 500; color: var(--muted); }
+.pastors-names b { font-weight: 800; color: var(--ink); }
+.pastors-names .amp { color: var(--sky); font-weight: 800; font-size: .8em; line-height: 1; }
+.pastors-txt .lead { max-width: 520px; }
+.pastors-verse { margin-top: 28px; padding: 18px 20px; background: #fff; border-radius: var(--r-md); border: 1px solid var(--hairline); max-width: 520px; }
+.pastors-verse blockquote { font-size: 18px; font-weight: 600; font-style: italic; }
+.pastors-verse figcaption { margin-top: 4px; font-size: 13px; font-weight: 700; color: #b08a1e; letter-spacing: .04em; }
+.pastors-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.pastors-band + .banner { margin-top: 0; }
+
+/* ---------- Instagram ---------- */
+.ig-band .lead a { color: var(--primary); font-weight: 600; text-decoration: none; }
+.ig-band .lead a:hover { text-decoration: underline; }
+.btn-ig { color: #fff; background: linear-gradient(45deg, #f9a43b 0%, #e1306c 45%, #833ab4 100%); flex: none; }
+.btn-ig:hover { filter: brightness(1.06); }
+.ig-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.ig-card {
+  position: relative; border-radius: var(--r-md); overflow: hidden; background: #fff;
+  border: 1px solid var(--hairline); height: 640px;
+}
+.ig-card iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.ig-card .ig-loading {
+  position: absolute; inset: 0; display: grid; place-items: center; align-content: center; gap: 10px;
+  color: var(--muted); font-size: 14px; background: var(--surface-soft);
+}
+.ig-card .ig-loading .ic { width: 34px; height: 34px; color: #e1306c; }
+.ig-card.loaded .ig-loading { display: none; }
+
+@media (max-width: 960px) {
+  .pastors { grid-template-columns: 1fr; }
+  .pastors-photo { max-width: 520px; }
+  .ig-grid {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(300px, 46%);
+    overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin: 0 calc(-1 * clamp(20px, 5vw, 80px)); padding: 0 clamp(20px, 5vw, 80px) 4px;
+  }
+  .ig-grid::-webkit-scrollbar { display: none; }
+  .ig-card { scroll-snap-align: center; }
+}
+@media (max-width: 760px) {
+  .pastors-photo::before { inset: 12px -10px -12px 10px; }
+  .pastors-card { left: 12px; bottom: 12px; }
+  .ig-grid { grid-auto-columns: 86%; }
+  .ig-card { height: 600px; }
+  .head-row { flex-wrap: wrap; align-items: flex-start; }
+}
+
 /* ---------- Animación de aparición ---------- */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .reveal.visible { opacity: 1; transform: none; }
