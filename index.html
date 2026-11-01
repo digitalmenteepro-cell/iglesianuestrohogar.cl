@@ -228,19 +228,20 @@
     </form>
 
     <!-- Fotografía principal -->
-    <figure class="hero-photo reveal d3">
-      <picture>
-        <img src="assets/web/bautismo.webp" alt="Celebración de aniversario y bautismos de Iglesia Nuestro Hogar: hermanos vestidos de blanco celebrando al aire libre" width="1600" height="900" fetchpriority="high">
-      </picture>
-      <span class="fav-badge"><svg class="ic" aria-hidden="true"><use href="#i-sparkle"/></svg> Aniversario y bautismos</span>
+    <!-- Carrusel principal: para cambiar fotos, edita los <img> y su data-cap -->
+    <figure class="hero-photo slider reveal d3" id="heroSlider" aria-roledescription="carrusel" aria-label="Fotos de Nuestro Hogar">
+      <img class="slide is-on" data-cap="Aniversario y bautismos" src="assets/web/bautismo.webp" alt="Celebración de aniversario y bautismos de Iglesia Nuestro Hogar: hermanos vestidos de blanco celebrando al aire libre" width="1600" height="900" fetchpriority="high">
+      <img class="slide" data-cap="Alabanza en vivo" src="assets/web/portada.webp" alt="Equipo de alabanza de Nuestro Hogar dirigiendo la adoración" width="1600" height="900" loading="lazy">
+      <img class="slide" data-cap="Nuestra congregación" src="assets/web/congregacion.webp" alt="Congregación de Nuestro Hogar reunida" width="1600" height="1067" loading="lazy">
+      <img class="slide" data-cap="Servimos en la ciudad" src="assets/web/min-servicio.webp" alt="Hermanos de Nuestro Hogar compartiendo en un parque de Chillán" width="1206" height="532" loading="lazy">
 
-      <div class="next-card" aria-live="polite">
-        <div class="next-ico" aria-hidden="true"><svg class="ic"><use href="#i-cal"/></svg></div>
-        <div>
-          <span class="next-lab">Próximo culto</span>
-          <strong class="next-date" id="nextDate">Este sábado · 18:30 h</strong>
-        </div>
-        <a href="#reuniones" class="next-go" aria-label="Ver detalles del culto"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <span class="fav-badge"><svg class="ic" aria-hidden="true"><use href="#i-sparkle"/></svg> <span id="slideCap">Aniversario y bautismos</span></span>
+
+      <div class="slide-dots" role="tablist" aria-label="Elegir foto">
+        <button type="button" role="tab" aria-selected="true" aria-label="Foto 1"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Foto 2"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Foto 3"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Foto 4"></button>
       </div>
     </figure>
 
@@ -373,6 +374,21 @@
 <!-- =========================================================
      3. MINISTERIOS
      ========================================================= -->
+<!-- BANNER 1 -->
+<section class="banner" aria-label="Ven como estás">
+  <div class="banner-media" aria-hidden="true">
+    <img class="parallax" src="assets/web/adoracion-luz.webp" alt="" width="1069" height="1600" loading="lazy">
+  </div>
+  <div class="wrap banner-in">
+    <p class="banner-kicker reveal">Nuestro Hogar</p>
+    <h2 class="banner-title reveal d1">Ven como estás.<br>Aquí hay un lugar <em>guardado para ti.</em></h2>
+    <div class="banner-btns reveal d2">
+      <a href="#inicio" class="btn btn-light">Planear mi visita</a>
+      <a href="#momentos" class="btn btn-ghost-light">Ver momentos</a>
+    </div>
+  </div>
+</section>
+
 <section id="ministerios" class="band">
   <div class="wrap">
 
@@ -497,6 +513,20 @@
 <!-- =========================================================
      5. ORACIÓN
      ========================================================= -->
+<!-- BANNER 2 -->
+<section class="banner banner-right" aria-label="No estás solo">
+  <div class="banner-media" aria-hidden="true">
+    <img class="parallax" src="assets/web/oracion-personal.webp" alt="" width="1067" height="1600" loading="lazy" style="object-position:50% 30%">
+  </div>
+  <div class="wrap banner-in">
+    <p class="banner-kicker reveal">Oración</p>
+    <h2 class="banner-title reveal d1">No estás solo.<br><em>Dios cuida de ti.</em></h2>
+    <div class="banner-btns reveal d2">
+      <a href="#oracion" class="btn btn-light">Dejar un pedido de oración</a>
+    </div>
+  </div>
+</section>
+
 <section id="oracion" class="band band-soft">
   <div class="wrap">
     <div class="pray">
@@ -600,6 +630,22 @@
 <!-- =========================================================
      7. CONTACTO / DÓNDE NOS REUNIMOS
      ========================================================= -->
+<!-- CINTA DE FOTOS EN MOVIMIENTO -->
+<section class="marquee" aria-label="Fotos de la comunidad">
+  <p class="marquee-title">Hay un lugar para ti <span aria-hidden="true">·</span> Hay un lugar para ti <span aria-hidden="true">·</span> Hay un lugar para ti</p>
+  <div class="marquee-track" id="marquee">
+    <img src="assets/web/min-alabanza.webp" alt="Alabanza" loading="lazy" width="1165" height="1600">
+    <img src="assets/web/banda-escenario.webp" alt="Banda en vivo" loading="lazy" width="1600" height="1067">
+    <img src="assets/web/min-jovenes.webp" alt="Jóvenes" loading="lazy" width="988" height="1600">
+    <img src="assets/web/bautismo.webp" alt="Bautismos" loading="lazy" width="1600" height="900">
+    <img src="assets/web/min-mujeres.webp" alt="Mujeres" loading="lazy" width="1206" height="1438">
+    <img src="assets/web/alabanza-banda.webp" alt="Adoración" loading="lazy" width="1600" height="1067">
+    <img src="assets/web/min-familias.webp" alt="Familias" loading="lazy" width="1200" height="1600">
+    <img src="assets/web/comunidad.webp" alt="Comunidad" loading="lazy" width="1067" height="1600">
+    <img src="assets/web/min-oracion.webp" alt="Oración" loading="lazy" width="1138" height="1600">
+  </div>
+</section>
+
 <section id="contacto" class="band">
   <div class="wrap">
     <p class="kicker reveal">Visítanos</p>
