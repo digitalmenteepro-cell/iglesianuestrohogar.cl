@@ -413,6 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
       f.loading = 'lazy';
       f.allow = 'autoplay; encrypted-media; picture-in-picture; clipboard-write';
       f.setAttribute('allowfullscreen', '');
+      f.setAttribute('scrolling', 'no');
       f.addEventListener('load', () => card.classList.add('loaded'));
       card.appendChild(f);
     };
