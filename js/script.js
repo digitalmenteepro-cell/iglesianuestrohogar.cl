@@ -18,6 +18,16 @@
 const EVENTOS = [
 ];
 
+/* -------------------------------------------------------------
+   VIDEOS DE INSTAGRAM — pega aquí el enlace de cada reel.
+   (En Instagram: abre el video → ··· → Copiar enlace)
+   ------------------------------------------------------------- */
+const VIDEOS_IG = [
+  'https://www.instagram.com/reel/DfItkkwvvKB/',
+  'https://www.instagram.com/reel/De5ZlSNP4_e/',
+  'https://www.instagram.com/reel/De3H9z-PrSm/'
+];
+
 const WHATSAPP = '56992483272';
 const MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 const MESES_C = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
@@ -382,6 +392,37 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     window.addEventListener('scroll', () => { if (!pend) { pend = true; requestAnimationFrame(mover); } }, { passive: true });
     mover();
+  }
+
+  /* 17. Videos de Instagram (se cargan cuando la sección se acerca a la pantalla) */
+  const igGrid = $('#igGrid');
+  if (igGrid) {
+    const codigos = VIDEOS_IG
+      .map(u => (String(u).match(/instagram\.com\/(?:[^/]+\/)?(reel|p|tv)\/([A-Za-z0-9_-]+)/) || []))
+      .filter(m => m[2]);
+    igGrid.innerHTML = codigos.map(([, tipo, cod], i) => `
+      <div class="ig-card reveal${i ? ' d' + i : ''}" data-src="https://www.instagram.com/${tipo === 'p' ? 'p' : 'reel'}/${cod}/embed/">
+        <div class="ig-loading"><svg class="ic" aria-hidden="true"><use href="#i-instagram"/></svg><span>Cargando video…</span></div>
+      </div>`).join('');
+    const cargar = card => {
+      if (card.dataset.ok) return;
+      card.dataset.ok = '1';
+      const f = document.createElement('iframe');
+      f.src = card.dataset.src;
+      f.title = 'Video de Instagram de Iglesia Nuestro Hogar';
+      f.loading = 'lazy';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; clipboard-write';
+      f.setAttribute('allowfullscreen', '');
+      f.addEventListener('load', () => card.classList.add('loaded'));
+      card.appendChild(f);
+    };
+    const cards = $$('.ig-card', igGrid);
+    if ('IntersectionObserver' in window) {
+      const o = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { cargar(e.target); e.target.classList.add('visible'); o.unobserve(e.target); }
+      }), { rootMargin: '400px 300px' });
+      cards.forEach(c => o.observe(c));
+    } else cards.forEach(cargar);
   }
 
   /* 13. Año actual */
