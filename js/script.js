@@ -325,6 +325,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const sinMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* 14. Carrusel de fotos del inicio */
+  const slider = $('#heroSlider');
+  if (slider) {
+    const slides = $$('.slide', slider);
+    const dots = $$('.slide-dots button', slider);
+    const cap = $('#slideCap');
+    let actual = 0, timer = null;
+    const ir = i => {
+      actual = (i + slides.length) % slides.length;
+      slides.forEach((s, k) => s.classList.toggle('is-on', k === actual));
+      dots.forEach((d, k) => d.setAttribute('aria-selected', k === actual ? 'true' : 'false'));
+      if (cap) cap.textContent = slides[actual].dataset.cap || '';
+    };
+    const iniciar = () => { if (!sinMovimiento) { clearInterval(timer); timer = setInterval(() => ir(actual + 1), 5500); } };
+    dots.forEach((d, k) => d.addEventListener('click', () => { ir(k); iniciar(); }));
+    // Precarga las fotos siguientes para que el cambio sea suave
+    slides.forEach(s => { s.loading = 'eager'; });
+    let x0 = null;
+    slider.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener('touchend', e => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) { ir(actual + (dx < 0 ? 1 : -1)); iniciar(); }
+      x0 = null;
+    });
+    document.addEventListener('visibilitychange', () => document.hidden ? clearInterval(timer) : iniciar());
+    iniciar();
+  }
+
+  /* 15. Cinta de fotos infinita (duplica las fotos para que no se corte) */
+  const cinta = $('#marquee');
+  if (cinta) {
+    $$('img', cinta).forEach(img => {
+      const c = img.cloneNode(true);
+      c.alt = ''; c.setAttribute('aria-hidden', 'true');
+      cinta.appendChild(c);
+    });
+  }
+
+  /* 16. Efecto de profundidad en los banners */
+  const para = $$('.parallax');
+  if (para.length && !sinMovimiento) {
+    let pend = false;
+    const mover = () => {
+      const vh = window.innerHeight;
+      para.forEach(img => {
+        const r = img.parentElement.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) return;
+        const p = (r.top + r.height / 2 - vh / 2) / vh; // -1 … 1
+        img.style.transform = `translate3d(0, ${(p * -12).toFixed(2)}%, 0)`;
+      });
+      pend = false;
+    };
+    window.addEventListener('scroll', () => { if (!pend) { pend = true; requestAnimationFrame(mover); } }, { passive: true });
+    mover();
+  }
+
   /* 13. Año actual */
   const anio = $('#anio');
   if (anio) anio.textContent = new Date().getFullYear();
