@@ -632,6 +632,8 @@ section[id], aside[id] { scroll-margin-top: calc(var(--nav-h) + 12px); }
   transition: opacity 1.4s ease, transform 9s cubic-bezier(.2,.6,.2,1);
 }
 .hero-stage .slide.is-on { opacity: 1; transform: scale(1); }
+.hero-stage .hero-single { animation: heroZoom 16s cubic-bezier(.2,.6,.2,1) both; }
+@keyframes heroZoom { from { transform: scale(1.08); } to { transform: scale(1); } }
 .hero-shade {
   position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background:
