@@ -26,8 +26,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/web/hero-bautismo.webp">
-  <link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="preload" as="image" href="assets/web/portada-bautismo.webp">
+  <link rel="stylesheet" href="css/styles.css?v=7">
 
   <script type="application/ld+json">
   {
@@ -191,12 +191,9 @@
      ========================================================= -->
 <section id="inicio" class="hero2">
 
-  <!-- Portada a pantalla completa con fotos que cambian (para cambiar fotos, edita los <img> y su data-cap) -->
-  <div class="hero-stage slider" id="heroSlider" aria-roledescription="carrusel" aria-label="Fotos de Nuestro Hogar">
-    <img class="slide is-on" data-cap="Aniversario y bautismos" src="assets/web/hero-bautismo.webp" alt="Celebración de aniversario y bautismos de Iglesia Nuestro Hogar" width="2000" height="1125" fetchpriority="high" style="--pos:50% 40%">
-    <img class="slide" data-cap="Alabanza en vivo" src="assets/web/hero-banda.webp" alt="Equipo de alabanza de Nuestro Hogar" width="2000" height="1333" style="--pos:45% 45%">
-    <img class="slide" data-cap="Adoración" src="assets/web/hero-adoracion.webp" alt="Congregación adorando con las manos en alto" width="1080" height="1616" style="--pos:50% 35%">
-    <img class="slide" data-cap="Nuestra congregación" src="assets/web/hero-congregacion.webp" alt="Congregación de Nuestro Hogar reunida" width="2000" height="1333" style="--pos:50% 50%">
+  <!-- Portada a pantalla completa (una sola foto en alta calidad) -->
+  <div class="hero-stage">
+    <img class="slide is-on hero-single" src="assets/web/portada-bautismo.webp" alt="Celebración de aniversario y bautismos de Iglesia Nuestro Hogar" width="2560" height="1440" fetchpriority="high" style="--pos:55% 40%">
     <div class="hero-shade" aria-hidden="true"></div>
 
     <div class="wrap hero-copy">
@@ -218,13 +215,7 @@
         <span><small>Te damos la bienvenida</small><strong>Pastores Israel y Lucila</strong></span>
       </a>
       <div class="hero-nav">
-        <span class="hero-cap"><svg class="ic" aria-hidden="true"><use href="#i-sparkle"/></svg> <span id="slideCap">Aniversario y bautismos</span></span>
-        <div class="slide-dots" role="tablist" aria-label="Elegir foto">
-          <button type="button" role="tab" aria-selected="true" aria-label="Foto 1"></button>
-          <button type="button" role="tab" aria-selected="false" aria-label="Foto 2"></button>
-          <button type="button" role="tab" aria-selected="false" aria-label="Foto 3"></button>
-          <button type="button" role="tab" aria-selected="false" aria-label="Foto 4"></button>
-        </div>
+        <span class="hero-cap"><svg class="ic" aria-hidden="true"><use href="#i-sparkle"/></svg> Aniversario y bautismos</span>
       </div>
     </div>
   </div>
@@ -861,6 +852,6 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-<script src="js/script.js?v=6"></script>
+<script src="js/script.js?v=7"></script>
 </body>
 </html>
