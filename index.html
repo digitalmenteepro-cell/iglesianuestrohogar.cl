@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/web/portada-bautismo.webp">
-  <link rel="stylesheet" href="css/styles.css?v=7">
+  <link rel="stylesheet" href="css/styles.css?v=8">
 
   <script type="application/ld+json">
   {
@@ -193,8 +193,11 @@
 
   <!-- Portada a pantalla completa (una sola foto en alta calidad) -->
   <div class="hero-stage">
-    <img class="slide is-on hero-single" src="assets/web/portada-bautismo.webp" alt="Celebración de aniversario y bautismos de Iglesia Nuestro Hogar" width="2560" height="1440" fetchpriority="high" style="--pos:55% 40%">
-    <div class="hero-shade" aria-hidden="true"></div>
+    <!-- La foto va en su propio espacio para que el texto no tape los rostros -->
+    <div class="hero-media">
+      <img class="hero-photo-img" src="assets/web/portada-bautismo.webp" alt="Celebración de aniversario y bautismos de Iglesia Nuestro Hogar" width="2560" height="1440" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+    </div>
 
     <div class="wrap hero-copy">
       <p class="hero-chip reveal"><span class="dot" aria-hidden="true"></span> Iglesia cristiana · Chillán</p>
