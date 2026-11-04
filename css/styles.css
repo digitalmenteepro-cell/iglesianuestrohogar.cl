@@ -354,6 +354,12 @@ section[id], aside[id] { scroll-margin-top: calc(var(--nav-h) + 12px); }
 .reserve-next .ic { width: 18px; height: 18px; }
 .reserve .btn + .btn { margin-top: 10px; }
 .reserve-note { text-align: center; color: var(--muted); font-size: 13px; margin-top: 14px; }
+.reserve-alt { display: flex; gap: 12px; align-items: flex-start; margin-top: 18px; padding: 14px; border: 1px solid var(--hairline); border-radius: var(--r-sm); }
+.reserve-alt-ico { flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--sky-soft); color: var(--primary-active); }
+.reserve-alt-ico .ic { width: 18px; height: 18px; }
+.reserve-alt strong { display: block; font-size: 15px; }
+.reserve-alt div span { display: block; font-size: 13px; color: var(--muted); }
+.reserve-alt div .reserve-alt-when { font-size: 14px; font-weight: 600; color: var(--primary-active); margin: 2px 0; }
 .hair { border: 0; border-top: 1px solid var(--hairline); margin: 20px 0 14px; }
 .reserve-list li { display: flex; justify-content: space-between; padding: 6px 0; font-size: 15px; }
 .reserve-list li span:first-child { text-decoration: underline; text-decoration-color: #b0b0b0; text-underline-offset: 3px; }
