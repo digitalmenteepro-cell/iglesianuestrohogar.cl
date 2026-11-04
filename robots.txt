@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /01-navbar.html
+Disallow: /02-portada.html
+Disallow: /03-nosotros.html
+Disallow: /04-reuniones.html
+Disallow: /05-oracion.html
+Disallow: /06-ministerios.html
+Disallow: /07-eventos.html
+Disallow: /08-contacto.html
+Disallow: /09-footer.html
+
+Sitemap: https://iglesianuestrohogar.cl/sitemap.xml
